@@ -25,6 +25,9 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "cnpj")
+    private int cnpj;
+
     @CreationTimestamp
     private Instant creationTimestamp;
 
@@ -100,5 +103,13 @@ public class User {
 
     public void setAccounts(List<Account> accounts) {
         this.accounts = accounts;
+    }
+
+    public int getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(int cnpj) {
+        this.cnpj = cnpj;
     }
 }
